@@ -1,5 +1,5 @@
 """
-ASGI config for alx_travel_app_0x00 project.
+ASGI config for alx_travel_app project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.asgi import get_asgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'alx_travel_app_0x00.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'alx_travel_app.settings')
 
 application = get_asgi_application()
