@@ -1,36 +1,87 @@
-# Milestone 3: Creating Views and API Endpoints
-Tasks
-0. API Development for Listings and Bookings in Django
-mandatory
-Objective
 
-Build API views to manage listings and bookings, and ensure the endpoints are documented with Swagger.
 
-Instructions
+# ALX Travel App: Milestone 3 - API Development for Listings and Bookings
 
-Duplicate Project:
+This project is part of the ALX ProDev program and focuses on developing API endpoints for managing listings and bookings in a travel application. 
 
-Duplicate the project alx_travel_app_0x00 to alx_travel_app_0x01
-Create ViewSets:
+## Project Objectives
 
-In listings/views.py, create viewsets for Listing and Booking using Django REST framework’s ModelViewSet.
-Ensure that these views provide CRUD operations for both models.
-Configure URLs:
+- Build API views to manage `Listings` and `Bookings` using Django REST Framework.
+- Implement CRUD operations for both models.
+- Document all API endpoints using Swagger.
+- Test the endpoints for functionality.
 
-Use a router to configure URLs for the API endpoints.
-Ensure endpoints follow RESTful conventions and are accessible under /api/.
-Test Endpoints:
+## Project Structure
 
-Test each endpoint (GET, POST, PUT, DELETE) using a tool like Postman to ensure they work as expected.
-Repo:
+```
+alx_travel_app_0x01/
+├── alx_travel_app/
+│   ├── settings.py
+│   ├── urls.py
+│   └── ...
+├── listings/
+│   ├── models.py
+│   ├── serializers.py
+│   ├── views.py
+│   ├── urls.py
+│   └── ...
+├── manage.py
+├── requirements.txt
+└── README.md
+```
 
-GitHub repository: alx_travel_app_0x01
-Directory: alx_travel_app
-File: listings/views.py, listings/urls.py, README.md
-1. Manual Review
-mandatory
-Repo:
+## Features
 
-GitHub repository: alx_travel_app_0x01
-Directory: alx_travel_app
-Copyright © 2025 ALX, All rights reserved.
+1. **Listings API**:
+   - Create, Read, Update, and Delete (CRUD) operations for travel listings.
+
+2. **Bookings API**:
+   - CRUD operations for managing bookings associated with listings.
+
+3. **Swagger Integration**:
+   - Automatically generated API documentation available at `/swagger/`.
+
+## Setup Instructions
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/alx_travel_app_0x01.git
+   cd alx_travel_app_0x01
+   ```
+
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. Configure environment variables:
+   - Create a `.env` file in the `alx_travel_app` directory with database credentials and other settings.
+
+4. Apply migrations:
+   ```bash
+   python manage.py migrate
+   ```
+
+5. Seed the database (optional):
+   ```bash
+   python manage.py seed
+   ```
+
+6. Run the development server:
+   ```bash
+   python manage.py runserver
+   ```
+
+7. Access the API documentation at:
+   ```
+   http://127.0.0.1:8000/swagger/
+   ```
+
+## Testing the API
+
+Use a tool like [Postman](https://www.postman.com/) or [curl](https://curl.se/) to test the API endpoints:
+
+- **Listings**: `/api/listings/`
+- **Bookings**: `/api/bookings/`
+
+
